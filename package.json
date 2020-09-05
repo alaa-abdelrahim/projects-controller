@@ -1,0 +1,21 @@
+{
+  "name": "projects-controller",
+  "version": "1.0.0",
+  "description": "App to manage projects and tasks",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "project manager",
+    "task manager",
+    "project controller",
+    "task controller"
+  ],
+  "author": "Alaa Abd El-Rahim",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^10.1.1",
+    "jsstore": "^3.10.3"
+  }
+}

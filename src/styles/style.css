@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:focus,
+button:focus,
+input:focus {
+    outline: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+#delete-account,
+.project,
+#index-page .p {
+    cursor: pointer;
+}
+
+.mainAfter::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #c2c1c1;
+    opacity: 0.8;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: ease-in-out;
+}
+
+.page-head {
+    text-align: center;
+    margin: 3.25rem;
+    background: -webkit-linear-gradient(90deg, gold, #20b2aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 5;
+    position: relative;
+}
+
+.page-head::after {
+    content: "";
+    display: block;
+    margin: 1rem auto 0 auto;
+    width: 5%;
+    height: 2px;
+    background-image: linear-gradient(90deg, gold, #20b2aa);
+}
+
+.page-head span {
+    text-transform: capitalize;
+}
+
+form {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+#cancel,
+#save,
+form button,
+form input {
+    border-radius: 30px;
+    box-shadow: none;
+    border: none;
+}
+
+form input {
+    padding: 13px 20px;
+    margin-right: 2.7rem;
+    width: 58%;
+    background-color: #eee;
+}
+
+form input,
+form input::placeholder {
+    letter-spacing: 0.7px;
+}
+
+form button {
+    position: absolute;
+    top: 0;
+    right: 22%;
+}
+
+#save,
+form button {
+    padding: 13px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-image: linear-gradient(90deg, gold, #20b2aa);
+    color: #fff;
+}
+
+#cancel {
+    padding: 13px 20px;
+    margin-right: 1%;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid #20b2aa;
+    color: #20b2aa;
+}
+
+/* ------------------------------- */
+/*  index style */
+/* ------------------------------- */
+
+#index-page #users {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto 2rem auto;
+}
+
+#index-page .p,
+#index-page .btn {
+    padding: 80px 0;
+    width: 160px;
+    line-height: 0;
+    background-color: crimson;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+    margin: 1rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+#index-page .p:hover,
+#index-page .btn:hover {
+    box-shadow: 1px 1px 10px #333;
+}
+
+#index-page .btn {
+    font-size: 3rem;
+}
+
+#index-page #inputs-wrapper {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    background-color: #fff;
+    display: none;
+}
+
+#index-page form {
+    width: 70%;
+    padding: 2rem;
+    margin: 20vh auto;
+    border: 1px solid rgb(175, 175, 175);
+}
+
+#index-page input {
+    width: 100%;
+    padding: 13px 20px;
+    margin-bottom: 2.7rem;
+    background-color: #eee;
+    box-shadow: none;
+    border: none;
+    border-radius: 30px;
+}
+
+#index-page input:first-child {
+    margin-bottom: 4rem;
+}
+
+#index-page .error {
+    color: crimson;
+    font-weight: bold;
+    margin-bottom: 2.7rem;
+    text-align: center;
+    visibility: hidden;
+}
+
+#index-page form button {
+    display: block;
+    margin: 0 auto;
+    position: initial;
+}
+
+/* ------------------------------- */
+/* projects style */
+/* ------------------------------- */
+
+.projects-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projects div {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #20b2aa;
+    margin: 0.5rem;
+    width: max-content;
+}
+
+.projects svg {
+    width: 50px;
+    margin-right: 25px;
+}
+
+.projects path {
+    fill: #fff;
+}
+
+.projects h2 {
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.bin {
+    position: fixed;
+    bottom: 7vh;
+    right: 50px;
+}
+
+.bin-svg-wrapper {
+    width: max-content;
+    height: max-content;
+}
+
+.bin svg {
+    width: 100px;
+    transform: all ease 0.7s;
+}
+
+.bin-big svg {
+    transform: scale(1.1);
+}
+
+.bin-big path {
+    fill: #dc143c;
+}
+
+#delete-account {
+    background-color: transparent;
+    border: 1px solid #dc143c;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    color: #dc143c;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    position: fixed;
+    z-index: 12;
+    top: 4vh;
+    right: 50px;
+}
+
+#delete-account:hover {
+    background-color: #dc143c;
+    color: #fff;
+}
+
+/* ------------------------------- */
+/* tasks style */
+/* ------------------------------- */
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#container section {
+    width: 23%;
+    border: 3px solid #eee;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.tasksSection {
+    height: 60vh;
+    width: 100%;
+}
+
+#container section h2 {
+    text-align: center;
+    padding: 15px;
+    margin: 0 0 5px 0;
+}
+
+#Approved li,
+.green {
+    background-color: #65a800;
+    color: #fff;
+}
+
+#hold li,
+.red {
+    background-color: #dc143c;
+    color: #fff;
+}
+
+#inProgress li,
+.gold {
+    background-color: gold;
+    color: #fff;
+}
+
+#review li,
+.blue {
+    background-color: #20b2aa;
+    color: #fff;
+}
+
+li {
+    width: 100%;
+    padding: 20px;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+li p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li p span:last-child {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.listOptionsWrapper {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    border: 0.5px solid;
+    display: none;
+}
+
+.listOptionsWrapper button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 10px;
+    color: #333;
+}
+
+.listOptionsWrapper button:first-child {
+    border-bottom: 0.5px solid;
+}
+
+#inProgress .listOptionsWrapper,
+#inProgress .listOptionsWrapper button {
+    border-color: gold;
+}
+
+#hold .listOptionsWrapper,
+#hold .listOptionsWrapper button {
+    border-color: #dc143c;
+}
+
+#review .listOptionsWrapper,
+#review .listOptionsWrapper button {
+    border-color: #20b2aa;
+}
+
+#Approved .listOptionsWrapper,
+#Approved .listOptionsWrapper button {
+    border-color: #65a800;
+}
+
+#descrpContainer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 -8px 20px #a5a4a4;
+    max-height: 0;
+    animation-name: hide;
+    animation-duration: 2s;
+    animation-fill-mode: ease-in-out;
+}
+
+#descrpWrapper {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10vh 0;
+    z-index: 100;
+}
+
+#description {
+    border: none;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 10vh;
+    padding: 3vh;
+    background-color: #eee;
+}
+
+#description,
+#description::placeholder {
+    font-size: 1rem;
+}
+
+/* ------------------------------- */
+/* keyframes for animation */
+/* ------------------------------- */
+
+@keyframes show {
+    100% {
+        max-height: 90vh;
+    }
+}
+
+@keyframes hide {
+    100% {
+        max-height: 0;
+    }
+}
+@keyframes fadeIn {
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+}
